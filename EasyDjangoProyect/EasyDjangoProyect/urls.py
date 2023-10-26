@@ -1,5 +1,5 @@
 """
-URL configuration for EasyDjangoProject project.
+URL configuration for EasyDjangoProyect project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -16,18 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from . import views
-
-from django.urls import include, path
-from django.conf import settings
-from django.conf.urls.static import static
-import os
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.portada, name='portada'),
-    path('iniciar-sesion/', views.iniciar_sesion, name='iniciar_sesion'),
-    path('cerrar-sesion/', views.cerrar_sesion, name='cerrar_sesion'),
-    path('panel-de-control/', views.panel_de_control, name='panel_de_control'),
-] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT) \
-    + static(settings.TEMPLATES_URL, document_root = settings.TEMPLATES_ROOT)
+]
