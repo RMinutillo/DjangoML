@@ -32,3 +32,5 @@ urlpatterns = [
     path('registro/', views.registro, name='registro'),
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT) \
     + static(settings.TEMPLATES_URL, document_root = settings.TEMPLATES_ROOT)
+
+#usuario de prueba ramiroagustin1 pass. domiteamo
