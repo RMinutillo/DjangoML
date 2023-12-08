@@ -12,9 +12,6 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
-import paypal
-
-
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -42,8 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Inicio',
-    'paypal'
-    
 ]
 
 MIDDLEWARE = [
@@ -123,16 +118,30 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [
+    'C:/Users/ramir/OneDrive/Escritorio/Data science/DjangoML-main/EasyDjangoProject/templates/coffee-shop-html-template/static',
+]
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
+# Find templates in the same folder as settings.py.
+TEMPLATE_DIRS = (
+    os.path.join(SETTINGS_PATH, 'templates'),
+)
+
 MEDIA_URL = '/media/'
 TEMPLATES_URL = '/templates/'
+
+#STATIC_ROOT = '/static/'
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 TEMPLATES_ROOT = os.path.join(BASE_DIR, 'templates')
 
-PAYPAL_CLIENT_ID = 'AWZ6riyhCBvNVeHjurFu_gPEGfpyNkfP6JWvPgj5n1TqqysRkVePt5lcITwQK926q8owtiSDTdIRk67k'
-PAYPAL_SECRET_KEY = 'ENcWPXmvMeoI5WqJOsU2xZX5aS6NSSSLK6gRAnPbr0ILTvGk2f8u8WU__XrTVluu7npyG68qb_4s-vnl'
+

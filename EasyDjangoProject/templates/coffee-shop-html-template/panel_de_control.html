@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Panel de Control</title>
+</head>
+<body>
+    <h1>Panel de Control</h1>
+    <!-- Contenido del panel de control -->
+    <p>Bienvenido, {{ user.username }}.</p> <!-- Esto mostrará el nombre de usuario si está autenticado -->
+    <a href="{% url 'cerrar_sesion' %}">Cerrar Sesión</a> <!-- Enlace para cerrar sesión -->
+    <!-- Aquí puedes mostrar datos desde la base de datos si es necesario -->
+</body>
+</html>

@@ -23,14 +23,12 @@ from django.conf import settings
 from django.conf.urls.static import static
 import os
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.portada, name='portada'),
     path('iniciar-sesion/', views.iniciar_sesion, name='iniciar_sesion'),
     path('cerrar-sesion/', views.cerrar_sesion, name='cerrar_sesion'),
     path('panel-de-control/', views.panel_de_control, name='panel_de_control'),
-    path('registro/', views.registro, name='registro'),
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT) \
     + static(settings.TEMPLATES_URL, document_root = settings.TEMPLATES_ROOT)
-
-#usuario de prueba ramiroagustin1 pass. domiteamo
