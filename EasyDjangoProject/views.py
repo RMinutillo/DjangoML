@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.contrib.auth import login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm
+from django.http import JsonResponse
 
 # Create your views here.
 
@@ -25,5 +26,10 @@ def cerrar_sesion(request):
 @login_required
 def panel_de_control(request):
     return render(request, 'panel_de_control.html')
+
+def paypal_integration(request):
+    # Lógica de tu vista, si es necesario
+    
+    return render(request, 'paypal_integration.html')
 
 

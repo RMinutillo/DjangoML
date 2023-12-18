@@ -22,6 +22,7 @@ from django.urls import include, path
 from django.conf import settings
 from django.conf.urls.static import static
 import os
+from .views import paypal_integration
 
 
 urlpatterns = [
@@ -30,5 +31,6 @@ urlpatterns = [
     path('iniciar-sesion/', views.iniciar_sesion, name='iniciar_sesion'),
     path('cerrar-sesion/', views.cerrar_sesion, name='cerrar_sesion'),
     path('panel-de-control/', views.panel_de_control, name='panel_de_control'),
+    path('paypal/', paypal_integration, name='paypal_integration'),
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT) \
     + static(settings.TEMPLATES_URL, document_root = settings.TEMPLATES_ROOT)
