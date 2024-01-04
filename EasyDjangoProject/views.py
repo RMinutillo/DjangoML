@@ -7,7 +7,7 @@ from django.http import JsonResponse
 # Create your views here.
 
 def portada(request):
-    return render(request,'coffee-shop-html-template\index.html')
+    return render(request,'coffee-shop-html-template/index.html')
 
 def iniciar_sesion(request):
     if request.method == 'POST':
@@ -31,5 +31,12 @@ def paypal_integration(request):
     # Lógica de tu vista, si es necesario
     
     return render(request, 'paypal_integration.html')
+
+
+
+def menu(request):
+    # Lógica de tu vista, si es necesario
+    
+    return render(request, 'EasyDjangoProject/EasyDjangoProject/templates/menu.html')
 
 
